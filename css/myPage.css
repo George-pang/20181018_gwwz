@@ -1,0 +1,85 @@
+/* 自定义样式 */
+/* 8屏样式 */
+/*第1屏start*/
+.section1 {
+  background: #fadd67 url(../images/t1fpyqfltdxxaiulhh-990-600.png) no-repeat center bottom;
+}
+.section1 .airship {
+  position: absolute;
+  right: 20%;
+  top: 10%;
+}
+.section1 .sofa {
+  position: absolute;
+  left: 50%;
+  margin-left: -200px;
+  bottom: 335px;
+}
+.section1 .goods {
+  position: absolute;
+  left: 50%;
+  margin-left: -420px;
+  bottom: 150px;
+}
+.section1 .airship-updown {
+  animation: airship-updown 2s linear infinite;
+}
+.section1 .sofa-updown {
+  animation: sofa-updown 2s linear infinite;
+}
+@keyframes airship-updown {
+  0% {
+    top: 10%;
+  }
+  50% {
+    top: 20%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+@keyframes sofa-updown {
+  0% {
+    top: 335px;
+  }
+  50% {
+    top: 360px;
+  }
+  100% {
+    top: 335px;
+  }
+}
+/*第1屏end*/
+.section2 {
+  background: #84a2d4 url(../images/t1zdgpfi8exxca6rfn-2000-600.png) no-repeat center bottom;
+}
+.section3 {
+  background: #ef674d;
+}
+.section4 {
+  background: #fed url(../images/t1iresfnxaxxca6rfn-2000-600.png) no-repeat center bottom;
+}
+.section5 {
+  background: #d04759 url(../images/t1yisqfa4exxa3gmkg-2000-1500.png);
+}
+.section6 {
+  background: #84d9ed url(../images/t1dvj.fn0gxxb0_fua-2500-600.png) no-repeat 25% 100%;
+}
+.section7 {
+  background: #8ac060 url(../images/t1wf1tfctaxxa3gmkg-2000-1500.png) no-repeat 50% 100%;
+}
+.section8 {
+  background: url(../images/ksgw.png);
+}
+/* 导航滑块颜色 */
+#fp-nav ul li a span {
+  background-color: #f40 !important;
+}
+/* 直接进入购物中心--固定图标 */
+.go-center {
+  position: fixed;
+  display: block;
+  top: 5%;
+  right: 5%;
+  z-index: 999;
+}

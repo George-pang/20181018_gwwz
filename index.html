@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>利用fullPage插件完成H5购物网站宣传页</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/fullpage.css">
+    <link rel="stylesheet" href="css/myPage.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- 可选，希望使用其他缓动效果 -->
+    <script type="text/javascript" src="js/easings.min.js"></script>
+    <script type="text/javascript" src="js/fullpage.js"></script>
+</head>
+
+<body>
+    <a href="#" class="go-center">
+        <img src="images/t1ldiffkjfxxxzhxzd-101-101.png" alt="">
+    </a>
+    <div id="fullpage">
+        <div class="section section1">第一屏
+            <img src="images/t1wsqsfgnaxxxmjxp6-470-50.png" class="airship airship-updown" alt="">
+            <img src="images/t1xccqfflgxxxild.png" class="sofa sofa-updown" alt="">
+            <img src="images/t1iakufbxxxxctz4tl-824-274.png" class="goods" alt="">
+        </div>
+        <div class="section section2">第二屏</div>
+        <div class="section section3">第三屏</div>
+        <div class="section section4">第四屏</div>
+        <div class="section section5">第五屏</div>
+        <div class="section section6">第六屏</div>
+        <div class="section section7">第七屏</div>
+        <div class="section section8">第八屏</div>
+    </div>
+    <!-- 使用jQuery进行初始化，将fullpage.js作为jQuery插件使用！ -->
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                //options here 配置对象
+                autoScrolling: true,
+                scrollHorizontally: true,
+                // 显示导航滑块
+                navigation: true,
+                // 许可秘钥：开源
+                licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+            });
+
+            //methods--允许滚动
+            $.fn.fullpage.setAllowScrolling(true);
+        });
+    </script>
+</body>
+
+</html>
