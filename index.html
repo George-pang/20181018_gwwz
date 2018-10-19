@@ -5,14 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>利用fullPage插件完成H5购物网站宣传页</title>
+    <title>fullpage.js制作H5购物网站宣传页</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/fullpage.css">
     <link rel="stylesheet" href="css/myPage.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <!-- 可选，希望使用其他缓动效果 -->
-    <script type="text/javascript" src="js/easings.min.js"></script>
+    <!-- GitHub的fullpage.js下提供的easing缓动效果插件，可选，希望使用其他缓动效果 -->
+    <!-- <script type="text/javascript" src="js/easings.min.js"></script> -->
+    <!-- 引用视频案例提高的easing缓动插件 -->
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <!-- 来自GitHub的fullpage.js -->
     <script type="text/javascript" src="js/fullpage.js"></script>
+    <!-- 来自视频案例的fullpage.js(老版本，使用规则不同) -->
+    <!-- <script src="js/jquery.fullPage.min.js"></script> -->
+    <script src="js/myPage.js"></script>
 </head>
 
 <body>
@@ -25,31 +31,88 @@
             <img src="images/t1xccqfflgxxxild.png" class="sofa sofa-updown" alt="">
             <img src="images/t1iakufbxxxxctz4tl-824-274.png" class="goods" alt="">
         </div>
-        <div class="section section2">第二屏</div>
-        <div class="section section3">第三屏</div>
-        <div class="section section4">第四屏</div>
-        <div class="section section5">第五屏</div>
-        <div class="section section6">第六屏</div>
+        <div class="section section2">第二屏
+            <div class="computer-bg">
+                <div class="search">
+                    <img src="images/search-words.png" class="search-wrods" alt="">
+                </div>
+                <img src="images/search-02-1.png" alt="" class="search-02-1">
+                <img src="images/goods-441-218.png" alt="" class="goods-02">
+                <!-- 二屏向三屏滚动时，沙发掉落到三屏的动画效果制作 -->
+                <img src="images/shirt-02-207-166.png" alt="" class="sofa-02">
+                <!-- 沙发掉落后用白色背景遮盖住元空间 -->
+                <div class="cover"></div>
+            </div>
+            <img src="images/words-01-361-25.png" alt="" class="words-01">
+            <img src="images/words-02.png" alt="" class="words-02">
+        </div>
+        <div class="section section3">第三屏
+            <div class="main">
+                <div class="select">
+                    <img src="images/img-01.gif" alt="" class="img">
+                    <img src="images/btn-01.gif" alt="" class="btn">
+                    <!-- 初始隐藏，沙发落下后切换显示-替代上面的2张图 -->
+                    <img src="images/img-01-a.gif" alt="" class="img img-active">
+                    <img src="images/btn-01-a.gif" alt="" class="btn btn-active">
+                </div>
+                <!-- 倾斜的沙发 -->
+                <img src="images/t1f.png" alt="" class="sofa-03-skew">
+            </div>
+        </div>
+        <div class="section section4">第四屏
+            <!-- 云朵-左右平移 -->
+            <img src="images/cloud.png" alt="" class="cloud animation-move-horizontal">
+            <!-- 文字-显示切换-->
+            <img src="images/words-04.png" alt="" class="words-04">
+            <img src="images/words-04-a.png" alt="" class="words-04 words-04-active">
+            <!-- 购物车 -->
+            <div class="car">
+                <img src="images/t1f.png" alt="" class="car-good">
+                <img src="images/car.png" alt="" class="car-pic">
+            </div>
+            <!-- 收件地址-初始隐藏 -->
+            <div class="addr">
+                <img src="images/t1.png" alt="" class="addr-box">
+                <img src="images/t1_addr.png" alt="" class="addr-info">
+            </div>
+        </div>
+        <div class="section section5">第五屏
+            <img src="images/words-05.png" alt="" class="words-05">
+            <img src="images/card-05.png" alt="" class="card-05">
+            <img src="images/order-05.png" alt="" class="order-05">
+            <img src="images/t1f.png" alt="" class="sofa-05">
+            <!-- 鼠标和手 初始样式溢出盒模型隐藏 -->
+            <div class="overflow">
+                <img src="images/mouse-05.png" alt="" class="mouse-05">
+                <img src="images/mouse-05-a.png" alt="" class="mouse-05 mouse-05-a">
+                <img src="images/hand-05.png" alt="" class="hand-05">
+            </div>
+        </div>
+        <div class="section section6">第六屏
+            <!-- 云朵 -->
+            <img src="images/cloud-06.png" alt="" class="cloud-06 animation-cloud-06">
+            <!-- 快递盒 -->
+            <img src="images/box-06.png" alt="" class="box-06">
+            <!-- 快递车 -->
+            <img src="images/car-06.png" alt="" class="car-06">
+            <!-- 收货地址 -->
+            <img src="images/ship_addr.png" alt="" class="shipping-address">
+            <!-- 快递员 -->
+            <img src="images/courier.png" alt="" class="courier">
+            <!-- 收货女孩 -->
+            <img src="images/girl.png" alt="" class="girl">
+            <!-- 口号 -->
+            <img src="images/slogan.png" alt="" class="slogan">
+            <!-- 请收货 -->
+            <img src="images/accept_goods.png" alt="" class="accept-goods">
+            <!-- the open door -->
+            <img src="images/the_open_door.png" alt="" class="the-open-door">
+
+        </div>
         <div class="section section7">第七屏</div>
         <div class="section section8">第八屏</div>
     </div>
-    <!-- 使用jQuery进行初始化，将fullpage.js作为jQuery插件使用！ -->
-    <script>
-        $(document).ready(function () {
-            $('#fullpage').fullpage({
-                //options here 配置对象
-                autoScrolling: true,
-                scrollHorizontally: true,
-                // 显示导航滑块
-                navigation: true,
-                // 许可秘钥：开源
-                licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
-            });
 
-            //methods--允许滚动
-            $.fn.fullpage.setAllowScrolling(true);
-        });
-    </script>
 </body>
 
 </html>
