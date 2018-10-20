@@ -1,7 +1,11 @@
 /* 自定义样式 */
 
 /* 8屏样式 */
-
+/*屏幕最小尺寸，防止缩放变形*/
+html,body,.section{
+    min-height: 600px;
+    min-width: 1000px;
+}
 /*第1屏start*/
 .section1 {
     background: #fadd67 url(../images/t1fpyqfltdxxaiulhh-990-600.png) no-repeat center bottom;
@@ -394,12 +398,58 @@
 /*第7屏start*/
 .section7 {
     background: #8ac060 url(../images/t1wf1tfctaxxa3gmkg-2000-1500.png) no-repeat 50% 100%;
+    // 白色五星评价
+    .star-07{
+        position: absolute;
+        left: 50%;
+        bottom: 439px;
+        margin-left: -295px;
+        width: 0;
+        height: 20px;
+        background: url(../images/star.png) no-repeat;
+        background-size: 97px;
+    }
+    //好评
+    .hp-07{
+        position: absolute;
+        bottom: 382px;
+        left: 50%;
+        margin-left: -289px;
+        display: none;
+    }
 }
 /*第7屏end*/
 
 /*第8屏start*/
 .section8 {
     background: url(../images/ksgw.png);
+    /*动画前样式 start*/
+    .startShopping{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 365px;
+        .btn-08-active{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+    }
+    .btn-replay{
+        position: absolute;
+        bottom: 403px;
+        left: 50%;
+        margin-left: 240px;
+        cursor: pointer;
+    }
+    .hand-08{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+    /*动画前样式 end*/
+    
 }
 /*第8屏end*/
 
@@ -415,4 +465,26 @@
     top: 5%;
     right: 5%;
     z-index: 999;
+}
+/*next 继续往下*/
+.next{
+    position: fixed;
+    bottom: 120px;
+    right: 10%;
+    z-index: 999;
+    cursor: pointer;
+}
+.next-updown{
+    animation: next-updown .8s linear infinite;
+}
+@keyframes next-updown{
+    0%{
+        bottom: 120px;
+    }
+    50%{
+        bottom: 100px;
+    }
+    100%{
+        bottom: 120px;
+    }
 }
